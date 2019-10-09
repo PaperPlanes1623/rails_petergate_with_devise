@@ -1,2 +1,16 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<h1>Welcome. You can now view all articles</h1>
+<% @articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <h3><%= article.content %></h3>
+  <h4><%= article.category %></h4>
+  <br />
+  <%= button_to "Edit", edit_article_path(article) %>
+  <%= button_to "Delete", article, method: :delete %>
+ <% end %><br />
+ <hr />
+ <h5>Are You An Editor? Log In or sign up to edit or delete</h5>
+ <%= link_to "Log In", new_editor_session_path %><br />
+ <%= link_to "Sign Up(Employee ID required)", new_editor_registration_path %>
+
+ <hr />
+ <%= link_to "Log Out", destroy_user_session_path %>

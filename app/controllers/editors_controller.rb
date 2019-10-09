@@ -10,4 +10,8 @@ class EditorsController < ApplicationController
 
   def edit
   end
+
+  def destroy
+    @editors = Editor.find(params[:id]).destroy
+  end
 end

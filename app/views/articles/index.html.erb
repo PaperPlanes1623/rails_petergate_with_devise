@@ -1,2 +1,21 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<h1>Welcome Guest!</h1>
+<hr />
+<h2>Our Articles</h2>
+<% @articles.each do |article| %>
+  <%= article.title %>
+  <%= link_to 'View All', article_path(article) %>
+  <br />
+ <% end %><br />
+ <hr />
+ <h3>Log In or Sign Up To View Articles!</h3>
+
+ <%= link_to "Log In", new_user_session_path %><br />
+ <%= link_to "Sign Up", new_user_registration_path %><br />
+ 
+ <hr />
+
+
+ 
+
+
+  

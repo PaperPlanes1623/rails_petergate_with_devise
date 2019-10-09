@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @articles = Article.all
   end
 
   def new
@@ -36,6 +37,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :content, :category)
+    params.require(:article).permit(:title, :content, :category, :user_id)
   end
 end
