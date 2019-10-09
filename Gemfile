@@ -57,6 +57,8 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
+#styling
+gem 'semantic-ui-sass'
 
 gem 'rails_12factor', group: :production
 
