@@ -5,7 +5,7 @@
   <h4><%= article.category %></h4>
   <br />
   <%= button_to "Edit", edit_article_path(article) %>
-  <%= button_to "Delete", article, method: :delete %>
+  <%= button_to "Delete", @article, method: :delete %>
  <% end %><br />
  <hr />
  <h5>Are You An Editor? Log In or sign up to edit or delete</h5>
