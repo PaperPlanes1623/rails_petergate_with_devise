@@ -1,7 +1,7 @@
 <h1>Welcome Guest!</h1>
 <hr />
 <h2>Our Articles</h2>
-<% @articles.each do |article| %>
+<% @articles.limit(3).each do |article| %>
   <%= article.title %>
   <%= link_to 'View All', article_path(article) %>
   <br />
